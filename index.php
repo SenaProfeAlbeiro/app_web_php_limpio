@@ -1,11 +1,11 @@
 <?php
     ob_start();
     require_once "models/DataBase.php";    
-    $view = isset($_REQUEST['c']) ? $_REQUEST['c'] : "Landing";
-    $controller = $view;
+    $controller = isset($_REQUEST['c']) ? $_REQUEST['c'] : "Landing";    
     $route = "controllers/" . $controller . ".php";
     if (file_exists($route)) {        
-        require_once $route;    
+        $view = $controller;
+        require_once $route;
         $controller = new $controller;
         $action = isset($_REQUEST['a']) ? $_REQUEST['a'] : 'main';
         if ($view === 'Landing') {        
