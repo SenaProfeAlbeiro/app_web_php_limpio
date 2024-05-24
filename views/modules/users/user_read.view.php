@@ -29,7 +29,7 @@
 						<thead>
 							<tr class="text-center roboto-medium">								
 								<th>ROL</th>
-								<th>CODIGO</th>
+								<th>CÓDIGO</th>
 								<th>NOMBRES</th>
 								<th>APELLIDOS</th>
 								<th>IDENTIFICACIÓN</th>
