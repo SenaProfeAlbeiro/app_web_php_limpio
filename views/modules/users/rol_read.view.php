@@ -1,7 +1,7 @@
 			<!-- Page header -->
 			<div class="full-box page-header">
 				<h3 class="text-left">
-					<i class="fas fa-clipboard-list fa-fw"></i> &nbsp; LISTA DE CLIENTES
+					<i class="fas fa-clipboard-list fa-fw"></i> &nbsp; LISTA DE ROLES
 				</h3>
 				<p class="text-justify">
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit nostrum rerum animi natus beatae ex. Culpa blanditiis tempore amet alias placeat, obcaecati quaerat ullam, sunt est, odio aut veniam ratione.
@@ -11,13 +11,13 @@
 			<div class="container-fluid">
 				<ul class="full-box list-unstyled page-nav-tabs">
 					<li>
-						<a href="client-new.html"><i class="fas fa-plus fa-fw"></i> &nbsp; AGREGAR CLIENTE</a>
+						<a href="?c=Users&a=rolCreate"><i class="fas fa-plus fa-fw"></i> &nbsp; AGREGAR ROL</a>
 					</li>
 					<li>
-						<a class="active" href="client-list.html"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; LISTA DE CLIENTES</a>
+						<a class="active" href="?c=Users&a=rolRead"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; LISTA DE ROLES</a>
 					</li>
 					<li>
-						<a href="client-search.html"><i class="fas fa-search fa-fw"></i> &nbsp; BUSCAR CLIENTE</a>
+						<a href="#"><i class="fas fa-search fa-fw"></i> &nbsp; BUSCAR ROL</a>
 					</li>
 				</ul>
 			</div>
@@ -28,92 +28,29 @@
 					<table class="table table-dark table-sm">
 						<thead>
 							<tr class="text-center roboto-medium">
-								<th>#</th>
-								<th>DNI</th>
+								<th>Código</th>
 								<th>NOMBRE</th>
-								<th>APELLIDO</th>
-								<th>TELEFONO</th>
 								<th>ACTUALIZAR</th>
 								<th>ELIMINAR</th>
 							</tr>
 						</thead>
 						<tbody>
-							<tr class="text-center" >
-								<td>1</td>
-								<td>012342567</td>
-								<td>NOMBRE DEL CLIENTE</td>
-								<td>APELLIDO DEL CLIENTE</td>
-								<td>72349874</td>
-								<td>
-									<a href="client-update.html" class="btn btn-success">
-	  									<i class="fas fa-sync-alt"></i>
-									</a>
-								</td>
-								<td>
-									<form action="">
-										<button type="button" class="btn btn-warning">
-		  									<i class="far fa-trash-alt"></i>
-										</button>
-									</form>
-								</td>
-							</tr>
-							<tr class="text-center" >
-								<td>2</td>
-								<td>012342567</td>
-								<td>NOMBRE DEL CLIENTE</td>
-								<td>APELLIDO DEL CLIENTE</td>
-								<td>72349874</td>
-								<td>
-									<a href="client-update.html" class="btn btn-success">
-	  									<i class="fas fa-sync-alt"></i>
-									</a>
-								</td>
-								<td>
-									<form action="">
-										<button type="button" class="btn btn-warning">
-		  									<i class="far fa-trash-alt"></i>
-										</button>
-									</form>
-								</td>
-							</tr>
-							<tr class="text-center" >
-								<td>3</td>
-								<td>012342567</td>
-								<td>NOMBRE DEL CLIENTE</td>
-								<td>APELLIDO DEL CLIENTE</td>
-								<td>72349874</td>
-								<td>
-									<a href="client-update.html" class="btn btn-success">
-	  									<i class="fas fa-sync-alt"></i>
-									</a>
-								</td>
-								<td>
-									<form action="">
-										<button type="button" class="btn btn-warning">
-		  									<i class="far fa-trash-alt"></i>
-										</button>
-									</form>
-								</td>
-							</tr>
-							<tr class="text-center" >
-								<td>4</td>
-								<td>012342567</td>
-								<td>NOMBRE DEL CLIENTE</td>
-								<td>APELLIDO DEL CLIENTE</td>
-								<td>72349874</td>
-								<td>
-									<a href="client-update.html" class="btn btn-success">
-	  									<i class="fas fa-sync-alt"></i>
-									</a>
-								</td>
-								<td>
-									<form action="">
-										<button type="button" class="btn btn-warning">
-		  									<i class="far fa-trash-alt"></i>
-										</button>
-									</form>
-								</td>
-							</tr>
+							<?php foreach ($roles as $rol) : ?>
+								<tr class="text-center" >
+									<td><?php echo $rol->getRolCode(); ?></td>
+									<td><?php echo $rol->getRolName(); ?></td>
+									<td>
+										<a href="?c=Users&a=rolUpdate&idRol=<?php echo $rol->getRolCode(); ?>" class="btn btn-success">
+											<i class="fas fa-sync-alt"></i>
+										</a>
+									</td>
+									<td>
+									<a href="?c=Users&a=rolDelete&idRol=<?php echo $rol->getRolCode(); ?>" class="btn btn-warning">
+											<i class="far fa-trash-alt"></i>
+										</a>
+									</td>
+								</tr>
+							<?php endforeach; ?>
 						</tbody>
 					</table>
 				</div>
@@ -131,5 +68,3 @@
 					</ul>
 				</nav>
 			</div>
-
-		</section>
