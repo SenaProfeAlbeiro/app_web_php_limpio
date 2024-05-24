@@ -51,18 +51,18 @@
 				<nav class="full-box nav-lateral-menu">
 					<ul>
 						<li>
-							<a href="?"><i class="fab fa-dashcube fa-fw"></i> &nbsp; Dashboard</a>
+							<a href="?c=Dashboard"><i class="fab fa-dashcube fa-fw"></i> &nbsp; Dashboard</a>
 						</li>
 
 						<li>
-							<a href="#" class="nav-btn-submenu"><i class="fas fa-users fa-fw"></i> &nbsp; Roles <i class="fas fa-chevron-down"></i></a>
-							<ul>
+							<a href="#" class="nav-btn-submenu <?php echo $action == ('rolCreate'|| 'rolRead') ? 'active' : '' ?> "><i class="fas fa-users fa-fw"></i> &nbsp; Roles <i class="fas fa-chevron-down"></i></a>
+							<ul class="<?php echo $action == ('rolCreate'|| 'rolRead') ? 'show-nav-lateral-submenu':''?>">
 								<li>
 									<!-- Etiqueta a, propiedad href="Se llama Controlador y Método" -->
-									<a href="?c=Users&a=rolCreate"><i class="fas fa-plus fa-fw"></i> &nbsp; Agregar Rol</a>
+									<a class="<?php echo $action == 'rolCreate' ? 'background-btn-active' : ''?>" href="?c=Users&a=rolCreate"><i class="fas fa-plus fa-fw"></i> &nbsp; Agregar Rol</a>
 								</li>
 								<li>
-									<a href="?c=Users&a=rolRead"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; Consultar Roles</a>
+									<a class="<?php echo $action == 'rolRead' ? 'background-btn-active' : ''?>" href="?c=Users&a=rolRead"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; Consultar Roles</a>
 								</li>
 								<li>
 									<a href="client-search.html"><i class="fas fa-search fa-fw"></i> &nbsp; Buscar Rol</a>

@@ -5,8 +5,8 @@
         public function __construct(){}
 
         // Controlador Principal
-        public function main(){
-            require_once "views/roles/admin/admin.view.php";
+        public function main(){            
+            header("Location: ?c=Dashboard");
         }
 
         // Controlador Crear Rol
