@@ -77,6 +77,7 @@
 
         // Controlador Consultar Usuarios
         public function userRead(){
+            $state = ['Inactivo', 'Activo'];
             $users = new User;
             $users = $users->read_users();
             require_once "views/modules/users/user_read.view.php";

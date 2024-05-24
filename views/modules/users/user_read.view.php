@@ -48,7 +48,7 @@
 									<th><?php echo $user->getUserLastName(); ?></th>
 									<th><?php echo $user->getUserId(); ?></th>
 									<th><?php echo $user->getUserEmail(); ?></th>
-									<th><?php echo $user->getUserState(); ?></th>
+									<th><?php echo $state[$user->getUserState()]; ?></th>
 									<td>
 										<a href="?c=Users&a=userUpdate&idUser=<?php echo $user->getUserCode(); ?>" class="btn btn-success">
 											<i class="fas fa-sync-alt"></i>	
