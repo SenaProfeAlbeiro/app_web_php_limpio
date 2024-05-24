@@ -85,6 +85,9 @@
         // Controlador Actualizar Usuario
         public function userUpdate(){
             if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+                $state = ['Inactivo', 'Activo'];
+                $roles = new User;
+                $roles = $roles->read_roles();
                 $user = new User;                
                 $user = $user->getuser_bycode($_GET['idUser']);                
                 require_once "views/modules/users/user_update.view.php";
