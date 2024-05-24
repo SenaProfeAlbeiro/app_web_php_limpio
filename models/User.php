@@ -235,7 +235,7 @@
 
         # RF08_CU08 - Registrar Usuario
         public function create_user(){
-            try {
+            try {                
                 $sql = 'INSERT INTO USERS VALUES (
                             :rolCode,
                             :userCode,
@@ -265,18 +265,32 @@
         public function read_users(){
             try {
                 $userList = [];
-                $sql = 'SELECT * FROM USERS';
+                $sql = 'SELECT 
+                            r.rol_code,
+                            r.rol_name,
+                            user_code,
+                            user_name,
+                            user_lastname,
+                            user_id,
+                            user_email,
+                            user_pass,
+                            user_state
+                        FROM ROLES AS r
+                        INNER JOIN USERS AS u
+                        on r.rol_code=u.rol_code';                
                 $stmt = $this->dbh->query($sql);
                 foreach ($stmt->fetchAll() as $user) {
-                    $userObj = new User;
-                    $userObj->setRolCode($user['rol_code']);
-                    $userObj->setUserCode($user['user_code']);
-                    $userObj->setUserName($user['user_name']);
-                    $userObj->setUserLastName($user['user_lastname']);
-                    $userObj->setUserId($user['user_id']);
-                    $userObj->setUserEmail($user['user_email']);
-                    $userObj->setUserPass($user['user_pass']);
-                    $userObj->setUserState($user['user_state']);
+                    $userObj = new User(
+                        $user['rol_code'],
+                        $user['rol_name'],
+                        $user['user_code'],
+                        $user['user_name'],
+                        $user['user_lastname'],
+                        $user['user_id'],
+                        $user['user_email'],
+                        $user['user_pass'],
+                        $user['user_state']
+                    );
                     array_push($userList, $userObj);
                 }
                 return $userList;

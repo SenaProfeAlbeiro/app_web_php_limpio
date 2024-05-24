@@ -79,7 +79,8 @@
         public function userRead(){
             $users = new User;
             $users = $users->read_users();
-            require_once "views/modules/users/user_read.view.php";
+            print_r($users);
+            // require_once "views/modules/users/user_read.view.php";
         }
 
         // Controlador Actualizar Usuario
