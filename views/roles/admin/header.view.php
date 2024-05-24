@@ -71,16 +71,16 @@
 						</li>
 
 						<li>
-							<a href="#" class="nav-btn-submenu"><i class="fas fa-pallet fa-fw"></i> &nbsp; Items <i class="fas fa-chevron-down"></i></a>
+							<a href="#" class="nav-btn-submenu"><i class="fas fa-pallet fa-fw"></i> &nbsp; Usuarios <i class="fas fa-chevron-down"></i></a>
 							<ul>
 								<li>
-									<a href="item-new.html"><i class="fas fa-plus fa-fw"></i> &nbsp; Agregar item</a>
+									<a href="?c=Users&a=userCreate"><i class="fas fa-plus fa-fw"></i> &nbsp; Agregar Usuario</a>
 								</li>
 								<li>
-									<a href="item-list.html"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; Lista de items</a>
+									<a href="?c=Users&a=userRead"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; Consultar Usuarios</a>
 								</li>
 								<li>
-									<a href="item-search.html"><i class="fas fa-search fa-fw"></i> &nbsp; Buscar item</a>
+									<a href="#"><i class="fas fa-search fa-fw"></i> &nbsp; Buscar Usuario</a>
 								</li>
 							</ul>
 						</li>

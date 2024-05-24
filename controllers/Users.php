@@ -54,24 +54,31 @@
 
         // Controlador Crear Usuario
         public function userCreate(){
-            $user = new User(
-                3,
-                null,
-                "Vicente",
-                "Fernández",
-                "456789321",
-                "vicente_fernandez@misena.edu.co",
-                "54321",
-                1
-            );
-            $user->create_user();
+            if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+                require_once "views/modules/users/user_create.view.php";
+            }
+            if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+                $user = new User(
+                    3,
+                    null,
+                    "Vicente",
+                    "Fernández",
+                    "456789321",
+                    "vicente_fernandez@misena.edu.co",
+                    "54321",
+                    1
+                );
+                print_r($user);
+                // $user->create_user();
+                // header("Location: ?c=Users&a=rolRead");
+            }
         }
 
         // Controlador Consultar Usuarios
         public function userRead(){
             $users = new User;
             $users = $users->read_users();
-            print_r($users);
+            require_once "views/modules/users/user_read.view.php";
         }
 
         // Controlador Actualizar Usuario
