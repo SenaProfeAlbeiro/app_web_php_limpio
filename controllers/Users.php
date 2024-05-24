@@ -79,31 +79,37 @@
         public function userRead(){
             $users = new User;
             $users = $users->read_users();
-            print_r($users);
-            // require_once "views/modules/users/user_read.view.php";
+            require_once "views/modules/users/user_read.view.php";
         }
 
         // Controlador Actualizar Usuario
         public function userUpdate(){
-            $userCode = 3;
-            // Objeto_01. Crear el objeto a partir del registro db, según petición
-            $user = new User;
-            $user = $user->getuser_bycode($userCode);
-            print_r($user);
+            if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+                $user = new User;                
+                $user = $user->getuser_bycode($_GET['idUser']);                
+                require_once "views/modules/users/user_update.view.php";
+            }
+            if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+                $rolUpdate = new User;
+                $rolUpdate->setRolCode($_POST['rol_code']);
+                $rolUpdate->setRolName($_POST['rol_name']);
+                $rolUpdate->update_rol();
+                header("Location: ?c=Users&a=rolRead");
+                #Objeto_02. Actualizar el usuario en la db, a partir del Objeto_01
+                $userUpdate = new User(
+                    3,
+                    $userCode,
+                    "Emily",
+                    "Rodriguez",
+                    "122344534",
+                    "em_rodriguez@misena.edu.co",
+                    "56432",
+                    0
+                );
+                $userUpdate->update_user();
+            }            
+            
 
-            #Objeto_02. Actualizar el usuario en la db, a partir del Objeto_01
-            $userUpdate = new User(
-                3,
-                $userCode,
-                "Emily",
-                "Rodriguez",
-                "122344534",
-                "em_rodriguez@misena.edu.co",
-                "56432",
-                0
-            );
-
-            $userUpdate->update_user();
         }
 
         // Controlador Eliminar Usuario

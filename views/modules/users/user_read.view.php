@@ -27,38 +27,40 @@
 				<div class="table-responsive">
 					<table class="table table-dark table-sm">
 						<thead>
-							<tr class="text-center roboto-medium">
-								<th>#</th>
-								<th>DNI</th>
-								<th>NOMBRE</th>
-								<th>APELLIDO</th>
-								<th>TELÉFONO</th>
-								<th>USUARIO</th>
+							<tr class="text-center roboto-medium">								
+								<th>ROL</th>
+								<th>CODIGO</th>
+								<th>NOMBRES</th>
+								<th>APELLIDOS</th>
+								<th>IDENTIFICACIÓN</th>
 								<th>EMAIL</th>
+								<th>ESTADO</th>
 								<th>ACTUALIZAR</th>
 								<th>ELIMINAR</th>
 							</tr>
 						</thead>
 						<tbody>
-							<tr class="text-center" >
-								<td>1</td>
-								<th>03045643</th>
-								<th>NOMBRE DE USUARIO</th>
-								<th>APELLIDO DE USUARIO</th>
-								<th>2345456</th>
-								<th>NOMBRE DE USUARIO</th>
-								<th>ADMIN@ADMIN.COM</th>
-								<td>
-									<a href="#" class="btn btn-success">
-	  									<i class="fas fa-sync-alt"></i>	
-									</a>
-								</td>
-								<td>
-									<a href="#" class="btn btn-warning">
-	  									<i class="far fa-trash-alt"></i>	
-									</a>									
-								</td>
-							</tr>							
+							<?php foreach ($users as $user) : ?>
+								<tr class="text-center" >
+									<td><?php echo $user->getRolName(); ?></td>
+									<th><?php echo $user->getUserCode(); ?></th>
+									<th><?php echo $user->getUserName(); ?></th>
+									<th><?php echo $user->getUserLastName(); ?></th>
+									<th><?php echo $user->getUserId(); ?></th>
+									<th><?php echo $user->getUserEmail(); ?></th>
+									<th><?php echo $user->getUserState(); ?></th>
+									<td>
+										<a href="?c=Users&a=userUpdate&idUser=<?php echo $user->getUserCode(); ?>" class="btn btn-success">
+											<i class="fas fa-sync-alt"></i>	
+										</a>
+									</td>
+									<td>
+										<a href="?c=Users&a=userDelete&idUser=<?php echo $user->getUserCode(); ?>" class="btn btn-warning">
+											<i class="far fa-trash-alt"></i>	
+										</a>									
+									</td>
+								</tr>
+							<?php endforeach; ?>
 						</tbody>
 					</table>
 				</div>

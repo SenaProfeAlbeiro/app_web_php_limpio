@@ -11,3 +11,4 @@ select
   from ROLES as r
   inner join USERS as u
   on r.rol_code=u.rol_code
+  WHERE user_code=1
