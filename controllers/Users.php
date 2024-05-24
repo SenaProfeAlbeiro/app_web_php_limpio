@@ -94,33 +94,28 @@
                 require_once "views/modules/users/user_update.view.php";
             }
             if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-                $rolUpdate = new User;
-                $rolUpdate->setRolCode($_POST['rol_code']);
-                $rolUpdate->setRolName($_POST['rol_name']);
-                $rolUpdate->update_rol();
-                header("Location: ?c=Users&a=rolRead");
-                #Objeto_02. Actualizar el usuario en la db, a partir del Objeto_01
                 $userUpdate = new User(
-                    3,
-                    $userCode,
-                    "Emily",
-                    "Rodriguez",
-                    "122344534",
-                    "em_rodriguez@misena.edu.co",
-                    "56432",
-                    0
+                    $_POST['rol_code'],
+                    $_POST['user_code'],                    
+                    $_POST['user_name'],
+                    $_POST['user_lastname'],
+                    $_POST['user_id'],
+                    $_POST['user_email'],
+                    $_POST['user_pass'],
+                    $_POST['user_state']
                 );
                 $userUpdate->update_user();
+                header("Location: ?c=Users&a=userRead");
             }            
             
 
         }
 
         // Controlador Eliminar Usuario
-        public function userDelete(){
-            $userCode = 2;
+        public function userDelete(){            
             $user = new User;
-            $user->delete_user($userCode);
+            $user->delete_user($_GET['idUser']);
+            header("Location: ?c=Users&a=userRead");
         }
     }
 ?>

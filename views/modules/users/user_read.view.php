@@ -43,12 +43,12 @@
 							<?php foreach ($users as $user) : ?>
 								<tr class="text-center" >
 									<td><?php echo $user->getRolName(); ?></td>
-									<th><?php echo $user->getUserCode(); ?></th>
-									<th><?php echo $user->getUserName(); ?></th>
-									<th><?php echo $user->getUserLastName(); ?></th>
-									<th><?php echo $user->getUserId(); ?></th>
-									<th><?php echo $user->getUserEmail(); ?></th>
-									<th><?php echo $state[$user->getUserState()]; ?></th>
+									<td><?php echo $user->getUserCode(); ?></td>
+									<td><?php echo $user->getUserName(); ?></td>
+									<td><?php echo $user->getUserLastName(); ?></td>
+									<td><?php echo $user->getUserId(); ?></td>
+									<td><?php echo $user->getUserEmail(); ?></td>
+									<td><?php echo $state[$user->getUserState()]; ?></td>
 									<td>
 										<a href="?c=Users&a=userUpdate&idUser=<?php echo $user->getUserCode(); ?>" class="btn btn-success">
 											<i class="fas fa-sync-alt"></i>	

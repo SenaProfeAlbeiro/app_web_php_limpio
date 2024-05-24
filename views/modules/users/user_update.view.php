@@ -29,6 +29,7 @@
 						<legend><i class="far fa-address-card"></i> &nbsp; Actualizar Información personal</legend>
 						<div class="container-fluid">
 							<div class="row">
+							<input type="hidden" class="form-control" name="user_code" id="user_code" value="<?php echo $user->getUserCode();?>">
 								<div class="col-12 col-md-6">
 									<div class="form-group">
 										<label for="rol_code" class="bmd-label-floating">Rol</label>
@@ -49,9 +50,9 @@
 										<select class="form-control" name="user_state">
                                             <?php for ($i = 0; $i <= 1; $i++) : ?>
                                                 <?php if ($user->getUserState() == $i) : ?>
-                                                    <option selected="" value="<?php $i ?>"><?php echo $state[$i] ?></option>
+                                                    <option selected="" value="<?php echo $i ?>"><?php echo $state[$i] ?></option>
                                                 <?php else : ?>
-                                                    <option value="<?php $i ?>"><?php echo $state[$i] ?></option>
+                                                    <option value="<?php echo $i ?>"><?php echo $state[$i] ?></option>
                                                 <?php endif; ?>
                                             <?php endfor; ?>
 										</select>
