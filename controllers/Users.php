@@ -2,22 +2,7 @@
     require_once "models/User.php";
     class Users{        
 
-        public function __construct(){
-            $action = isset($_REQUEST['a']) ? $_REQUEST['a'] : 'main';
-            require_once "views/roles/admin/header.view.php";            
-            if ($action == 'main') {
-                $this->main();
-            } elseif ($action == 'rolCreate') {
-                $this->rolCreate();
-            } elseif ($action == 'rolRead') {
-                $this->rolRead();
-            } elseif ($action == 'rolUpdate') {
-                $this->rolUpdate();
-            } elseif ($action == 'rolDelete') {
-                $this->rolDelete();
-            } 
-            require_once "views/roles/admin/footer.view.php";
-        }
+        public function __construct(){}
 
         // Controlador Principal
         public function main(){
