@@ -55,22 +55,23 @@
         // Controlador Crear Usuario
         public function userCreate(){
             if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+                $roles = new User;
+                $roles = $roles->read_roles();
                 require_once "views/modules/users/user_create.view.php";
             }
-            if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            if ($_SERVER['REQUEST_METHOD'] == 'POST') {                
                 $user = new User(
-                    3,
+                    $_POST['rol_code'],
                     null,
-                    "Vicente",
-                    "Fernández",
-                    "456789321",
-                    "vicente_fernandez@misena.edu.co",
-                    "54321",
-                    1
-                );
-                print_r($user);
-                // $user->create_user();
-                // header("Location: ?c=Users&a=rolRead");
+                    $_POST['user_name'],
+                    $_POST['user_lastname'],
+                    $_POST['user_id'],
+                    $_POST['user_email'],
+                    $_POST['user_pass'],
+                    $_POST['user_state']
+                );                
+                $user->create_user();
+                header("Location: ?c=Users&a=userRead");
             }
         }
 
