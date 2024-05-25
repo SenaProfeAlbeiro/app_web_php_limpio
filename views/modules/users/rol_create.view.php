@@ -3,9 +3,6 @@
 				<h3 class="text-left">
 					<i class="fas fa-plus fa-fw"></i> &nbsp; AGREGAR ROL
 				</h3>
-				<p class="text-justify">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem odit amet asperiores quis minus, dolorem repellendus optio doloremque error a omnis soluta quae magnam dignissimos, ipsam, temporibus sequi, commodi accusantium!
-				</p>
 			</div>
 
 			<div class="container-fluid">
