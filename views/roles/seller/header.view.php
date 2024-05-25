@@ -55,22 +55,6 @@
 						</li>
 
 						<li>
-							<a href="#" class="nav-btn-submenu"><i class="fas fa-user-secret fa-fw"></i> &nbsp; Roles <i class="fas fa-chevron-down"></i></a>
-							<ul>
-								<li>
-									<!-- Etiqueta a, propiedad href="Se llama Controlador y Método" -->
-									<a href="?c=Users&a=rolCreate"><i class="fas fa-plus fa-fw"></i> &nbsp; Registrar Rol</a>
-								</li>
-								<li>
-									<a href="?c=Users&a=rolRead"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; Consultar Roles</a>
-								</li>
-								<li>
-									<a href="#"><i class="fas fa-search fa-fw"></i> &nbsp; Buscar Rol</a>
-								</li>
-							</ul>
-						</li>
-
-						<li>
 							<a href="#" class="nav-btn-submenu"><i class="fas fa-users fa-fw"></i> &nbsp; Usuarios <i class="fas fa-chevron-down"></i></a>
 							<ul>
 								<li>
@@ -81,36 +65,6 @@
 								</li>
 								<li>
 									<a href="#"><i class="fas fa-search fa-fw"></i> &nbsp; Buscar Usuario</a>
-								</li>
-							</ul>
-						</li>
-
-						<li>
-							<a href="#" class="nav-btn-submenu"><i class="fas fa-list fa-fw"></i> &nbsp; Categorías <i class="fas fa-chevron-down"></i></a>							
-							<ul>
-								<li>
-									<a href="#"><i class="fas fa-plus fa-fw"></i> &nbsp; Registrar Categoría</a>
-								</li>
-								<li>
-									<a href="#"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; Constular Categoría</a>
-								</li>
-								<li>
-									<a href="#"><i class="fas fa-search-dollar fa-fw"></i> &nbsp; Buscar Categoría</a>
-								</li>								
-							</ul>
-						</li>
-
-						<li>							
-							<a href="#" class="nav-btn-submenu"><i class="fas fa-gifts fa-fw"></i> &nbsp; Productos <i class="fas fa-chevron-down"></i></a>
-							<ul>
-								<li>
-									<a href="#"><i class="fas fa-plus fa-fw"></i> &nbsp; Registrar Producto</a>
-								</li>
-								<li>
-									<a href="#"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; Consultar Productos</a>
-								</li>
-								<li>
-									<a href="#"><i class="fas fa-search fa-fw"></i> &nbsp; Buscar Producto</a>
 								</li>
 							</ul>
 						</li>
