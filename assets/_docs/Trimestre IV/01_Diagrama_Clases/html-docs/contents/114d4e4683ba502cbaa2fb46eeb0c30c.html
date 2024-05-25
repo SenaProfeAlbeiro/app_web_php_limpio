@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Vendedor</title>
+    <title></title>
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic|Source+Code+Pro:300,400,700' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="../assets/css/bootstrap.css">
 <link rel="stylesheet" href="../assets/css/jquery.bonsai.css">
@@ -19,15 +19,17 @@
 
       <!-- Name Title -->
 
-      <h1>Vendedor</h1>
+      <h1>(unnamed)</h1>
 
       <!-- Type and Stereotype -->
 
       <section style="margin-top: .5em;">
         <span class="alert alert-info">
-          <span class="node-icon staruml-icon icon-UMLActor"></span>
-          UMLActor
+          <span class="node-icon staruml-icon icon-UMLAssociationEnd"></span>
+          UMLAssociationEnd
         </span>
+        
+          <span style="margin-left: 10px" class="alert alert-info">«»</span>
         
       </section>
 
@@ -45,6 +47,12 @@
         
           <span>::</span>
           <span class="label label-info"><a href='3498be55945794b91234e33bb1965a77.html'><span class='node-icon staruml-icon icon-UMLActor'></span>Vendedor</a></span>
+        
+          <span>::</span>
+          <span class="label label-info"><a href='534c9c53b2cfb04f369cf1db631ca7b0.html'><span class='node-icon staruml-icon icon-UMLAssociation'></span>(Vendedor—CU15-Editar Perfil)</a></span>
+        
+          <span>::</span>
+          <span class="label label-info"><a href='114d4e4683ba502cbaa2fb46eeb0c30c.html'><span class='node-icon staruml-icon icon-UMLAssociationEnd'></span>(AssociationEnd)</a></span>
         
       </section>
 
@@ -80,35 +88,6 @@
       <!-- Classifier -->
 
       
-        
-        
-
-
-        
-        
-<section class="element-list">
-    <h3>Specialized Elements</h3>
-    <ul class="nav nav-list">
-        
-        <li><a href='93e507f71d40567c8503adbb1be6b9b8.html'><span class='node-icon staruml-icon icon-UMLActor'></span>Admin</a></li>
-        
-    </ul>
-</section>
-
-
-
-        
-        
-
-
-        
-        
-
-
-        
-        
-
-      
 
       <!-- Interface -->
 
@@ -123,29 +102,6 @@
       
 
       <!-- Actor -->
-
-      
-        
-        
-<section class="element-list">
-    <h3>Use Cases</h3>
-    <ul class="nav nav-list">
-        
-        <li><a href='a409e65131f0684fc9d3c85538f84760.html'><span class='node-icon staruml-icon icon-UMLUseCase'></span>CU01-Iniciar Sesión</a></li>
-        
-        <li><a href='88647ffed938e6badf21f1e7f1ddb54c.html'><span class='node-icon staruml-icon icon-UMLUseCase'></span>CU03-Cerrar Sesión</a></li>
-        
-        <li><a href='74bfa37ea7cfe6b8ff4a7e3602c81435.html'><span class='node-icon staruml-icon icon-UMLUseCase'></span>CU09-Registrar Usuario</a></li>
-        
-        <li><a href='412c6774fde5d6b174ab02b4ef907219.html'><span class='node-icon staruml-icon icon-UMLUseCase'></span>CU10-Consultar Usuarios</a></li>
-        
-        <li><a href='23afa0eb41dee17de994c9c0bc1ffe65.html'><span class='node-icon staruml-icon icon-UMLUseCase'></span>CU12-Actualizar Usuario</a></li>
-        
-        <li><a href='b695365caae43a2b3bb58d15bcd02322.html'><span class='node-icon staruml-icon icon-UMLUseCase'></span>CU15-Editar Perfil</a></li>
-        
-    </ul>
-</section>
-
 
       
 
@@ -265,7 +221,7 @@
     
     <tr>
         <td>name</td>
-        <td>Vendedor</td>
+        <td></td>
     </tr>
     
     
@@ -279,8 +235,17 @@
     
     
     <tr>
+        <td>reference</td>
+        <td><a href='b695365caae43a2b3bb58d15bcd02322.html'><span class='node-icon staruml-icon icon-UMLUseCase'></span>CU15-Editar Perfil</a></td>
+    </tr>
+    
+    
+    
+    
+    
+    <tr>
         <td>stereotype</td>
-        <td><span class='label label-info'>null</span></td>
+        <td></td>
     </tr>
     
     
@@ -296,18 +261,44 @@
     
     
     
-    
-    
-    
-    
-    
+    <tr>
+        <td>navigable</td>
+        <td>unspecified</td>
+    </tr>
     
     
     
     
     
     <tr>
-        <td>isAbstract</td>
+        <td>aggregation</td>
+        <td>none</td>
+    </tr>
+    
+    
+    
+    
+    
+    <tr>
+        <td>multiplicity</td>
+        <td></td>
+    </tr>
+    
+    
+    
+    
+    
+    <tr>
+        <td>defaultValue</td>
+        <td></td>
+    </tr>
+    
+    
+    
+    
+    
+    <tr>
+        <td>isReadOnly</td>
         <td><span class='label label-info'>false</span></td>
     </tr>
     
@@ -316,7 +307,7 @@
     
     
     <tr>
-        <td>isFinalSpecialization</td>
+        <td>isOrdered</td>
         <td><span class='label label-info'>false</span></td>
     </tr>
     
@@ -325,8 +316,46 @@
     
     
     <tr>
-        <td>isLeaf</td>
+        <td>isUnique</td>
         <td><span class='label label-info'>false</span></td>
+    </tr>
+    
+    
+    
+    
+    
+    <tr>
+        <td>isDerived</td>
+        <td><span class='label label-info'>false</span></td>
+    </tr>
+    
+    
+    
+    
+    
+    <tr>
+        <td>isID</td>
+        <td><span class='label label-info'>false</span></td>
+    </tr>
+    
+    
+    
+    
+    
+    <tr>
+        <td>qualifiers</td>
+        <td>
+            
+        </td>
+    </tr>
+    
+    
+    
+    
+    
+    <tr>
+        <td>ownerAttribute</td>
+        <td><span class='label label-info'>null</span></td>
     </tr>
     
     
@@ -342,69 +371,17 @@
       <!-- Constraints, Dependencies, Dependants -->
 
       
-        
-        
-
-
-        
-        
-
-
-        
-        
-
-      
 
       <!-- Relationships -->
 
       
       
-<section class="element-list">
-    <h3>Relationships</h3>
-    <ul class="nav nav-list">
-        
-        <li><a href='69277eafe08c50fae5f43fed8f262255.html'><span class='node-icon staruml-icon icon-UMLGeneralization'></span>(Admin→Vendedor)</a></li>
-        
-        <li><a href='675ec3d83db4dc90b2c554e85885926b.html'><span class='node-icon staruml-icon icon-UMLAssociation'></span>(Vendedor—CU01-Iniciar Sesión)</a></li>
-        
-        <li><a href='5fea46cd26d21b30119b552e35e29dc8.html'><span class='node-icon staruml-icon icon-UMLAssociation'></span>(Vendedor—CU03-Cerrar Sesión)</a></li>
-        
-        <li><a href='029d5a9e78d88f57fb759fe261370464.html'><span class='node-icon staruml-icon icon-UMLAssociation'></span>(Vendedor—CU09-Registrar Usuario)</a></li>
-        
-        <li><a href='bb2f7af0fce17b401a40f113119333cd.html'><span class='node-icon staruml-icon icon-UMLAssociation'></span>(Vendedor—CU10-Consultar Usuarios)</a></li>
-        
-        <li><a href='7d370f7ea2ce986653b9b4b3cd7f4f32.html'><span class='node-icon staruml-icon icon-UMLAssociation'></span>(Vendedor—CU12-Actualizar Usuario)</a></li>
-        
-        <li><a href='534c9c53b2cfb04f369cf1db631ca7b0.html'><span class='node-icon staruml-icon icon-UMLAssociation'></span>(Vendedor—CU15-Editar Perfil)</a></li>
-        
-    </ul>
-</section>
-
 
 
       <!-- Owned Elements -->
 
       
       
-<section class="element-list">
-    <h3>Owned Elements</h3>
-    <ul class="nav nav-list">
-        
-        <li><a href='675ec3d83db4dc90b2c554e85885926b.html'><span class='node-icon staruml-icon icon-UMLAssociation'></span>(Vendedor—CU01-Iniciar Sesión)</a></li>
-        
-        <li><a href='5fea46cd26d21b30119b552e35e29dc8.html'><span class='node-icon staruml-icon icon-UMLAssociation'></span>(Vendedor—CU03-Cerrar Sesión)</a></li>
-        
-        <li><a href='029d5a9e78d88f57fb759fe261370464.html'><span class='node-icon staruml-icon icon-UMLAssociation'></span>(Vendedor—CU09-Registrar Usuario)</a></li>
-        
-        <li><a href='bb2f7af0fce17b401a40f113119333cd.html'><span class='node-icon staruml-icon icon-UMLAssociation'></span>(Vendedor—CU10-Consultar Usuarios)</a></li>
-        
-        <li><a href='7d370f7ea2ce986653b9b4b3cd7f4f32.html'><span class='node-icon staruml-icon icon-UMLAssociation'></span>(Vendedor—CU12-Actualizar Usuario)</a></li>
-        
-        <li><a href='534c9c53b2cfb04f369cf1db631ca7b0.html'><span class='node-icon staruml-icon icon-UMLAssociation'></span>(Vendedor—CU15-Editar Perfil)</a></li>
-        
-    </ul>
-</section>
-
 
 
       <!-- Image Map Resizer (https://github.com/davidjbradshaw/image-map-resizer) -->
