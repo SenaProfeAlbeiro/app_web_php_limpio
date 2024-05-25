@@ -18,8 +18,7 @@ if (file_exists($route_controller)) {
         require_once "views/roles/".$session."/header.view.php";        
         call_user_func(array($controller, $action));
         require_once "views/roles/".$session."/footer.view.php";
-    } 
-    else {        
+    } else {        
         header("Location:?");
     }
 } else {
