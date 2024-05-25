@@ -16,8 +16,8 @@ class Login
             );
             $user = $user->login();            
             if ($user) {
-                $session = $user->getUserState();
-                if ($session != 0) {
+                $active = $user->getUserState();
+                if ($active != 0) {
                     $_SESSION['session'] = $user->getRolName();
                     header("Location:?c=Dashboard");
                 } else {

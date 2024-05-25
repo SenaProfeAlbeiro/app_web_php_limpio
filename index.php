@@ -12,8 +12,7 @@
             require_once "views/company/header.view.php";
             call_user_func(array($controller, $action));
             require_once "views/company/footer.view.php";
-        }
-        elseif (!empty($_SESSION['session'])) {
+        } elseif (!empty($_SESSION['session'])) {
             $session = $_SESSION['session'];            
             require_once "views/roles/".$session."/header.view.php";        
             call_user_func(array($controller, $action));
