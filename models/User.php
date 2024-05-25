@@ -130,7 +130,19 @@
         # RF01_CU01 - Iniciar Sesión
         public function login(){
             try {
-                $sql = 'SELECT * FROM USERS
+                $sql = 'SELECT
+                            r.rol_code,
+                            r.rol_name,
+                            user_code,
+                            user_name,
+                            user_lastname,
+                            user_id,
+                            user_email,
+                            user_pass,
+                            user_state
+                        FROM ROLES AS r
+                        INNER JOIN USERS AS u
+                        on r.rol_code = u.rol_code
                         WHERE user_email = :userEmail AND user_pass = :userPass';
                 $stmt = $this->dbh->prepare($sql);
                 $stmt->bindValue('userEmail', $this->getUserEmail());
@@ -140,6 +152,7 @@
                 if ($userDb) {
                     $user = new User(
                         $userDb['rol_code'],
+                        $userDb['rol_name'],
                         $userDb['user_code'],
                         $userDb['user_name'],
                         $userDb['user_lastname'],
@@ -235,7 +248,7 @@
 
         # RF08_CU08 - Registrar Usuario
         public function create_user(){
-            try {                
+            try {
                 $sql = 'INSERT INTO USERS VALUES (
                             :rolCode,
                             :userCode,
@@ -265,7 +278,7 @@
         public function read_users(){
             try {
                 $userList = [];
-                $sql = 'SELECT 
+                $sql = 'SELECT
                             r.rol_code,
                             r.rol_name,
                             user_code,
@@ -277,7 +290,7 @@
                             user_state
                         FROM ROLES AS r
                         INNER JOIN USERS AS u
-                        on r.rol_code = u.rol_code';                
+                        on r.rol_code = u.rol_code';
                 $stmt = $this->dbh->query($sql);
                 foreach ($stmt->fetchAll() as $user) {
                     $userObj = new User(
@@ -302,7 +315,7 @@
         # RF10_CU10 - Obtener el Usuario por el código
         public function getuser_bycode($userCode){
             try {
-                $sql = 'SELECT 
+                $sql = 'SELECT
                             r.rol_code,
                             r.rol_name,
                             user_code,
@@ -315,7 +328,7 @@
                         FROM ROLES AS r
                         INNER JOIN USERS AS u
                         on r.rol_code = u.rol_code
-                        WHERE user_code=:userCode';                
+                        WHERE user_code=:userCode';
                 $stmt = $this->dbh->prepare($sql);
                 $stmt->bindValue('userCode', $userCode);
                 $stmt->execute();

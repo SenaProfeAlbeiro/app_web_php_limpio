@@ -3,15 +3,21 @@
     class Login{
         // Controlador Principal
         public function main(){
-            $user = new User(
-                "vicente_fernandez@misena.edu.co",
-                "54321"
-            );
-            $user = $user->login();
-            if ($user) {
-                print_r($user);
-            } else {
-                echo "El Usuario No Existe";
+            if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+                require_once "views/company/login.view.php";
+            }
+            if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+                $user = new User(
+                    $_POST['user_email'],
+                    $_POST['user_pass']
+                );
+                $user = $user->login();
+                if ($user) {
+                    $_SESSION['session'] = $user->getRolName();
+                    header("Location: ?c=Dashboard");
+                } else {
+                    echo "El Usuario No Existe";
+                }
             }
 
         }
