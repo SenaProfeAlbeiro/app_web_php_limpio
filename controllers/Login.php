@@ -15,9 +15,15 @@ class Login
                 $_POST['user_pass']
             );
             $user = $user->login();            
-            if ($user) {                
-                $_SESSION['session'] = $user->getRolName();
-                header("Location:?c=Dashboard");
+            if ($user) {
+                $session = $user->getUserState();
+                if ($session != 0) {
+                    $_SESSION['session'] = $user->getRolName();
+                    header("Location:?c=Dashboard");
+                } else {
+                    $message = "El Usuario NO está activo";
+                    require_once "views/company/login.view.php";
+                }
             } else {
                 $message = "El Usuario NO existe";
                 require_once "views/company/login.view.php";

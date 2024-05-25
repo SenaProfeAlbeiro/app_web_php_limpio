@@ -389,7 +389,6 @@
                 die($e->getMessage());
             }
         }
-
     }
 
 ?>

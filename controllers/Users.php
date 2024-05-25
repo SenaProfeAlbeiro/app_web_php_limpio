@@ -1,8 +1,10 @@
-<?php
+<?php 
     require_once "models/User.php";
-    class Users{        
-
-        public function __construct(){}
+    class Users{
+        private $session;
+        public function __construct(){            
+            $this->session = $_SESSION['session'];
+        }
 
         // Controlador Principal
         public function main(){            
@@ -11,15 +13,20 @@
 
         // Controlador Crear Rol
         public function rolCreate(){
-            if ($_SERVER['REQUEST_METHOD'] == 'GET') {
-                require_once "views/modules/users/rol_create.view.php";
+            if ($this->session == 'admin') {
+                if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+                    require_once "views/modules/users/rol_create.view.php";
+                }
+                if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+                    $rol = new User;
+                    $rol->setRolName($_POST['rol_name']);
+                    $rol->create_rol();
+                    header("Location: ?c=Users&a=rolRead");
+                }                
+            } else {
+                header("Location: ?c=Dashboard");
             }
-            if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-                $rol = new User;
-                $rol->setRolName($_POST['rol_name']);
-                $rol->create_rol();
-                header("Location: ?c=Users&a=rolRead");
-            }
+            
         }
 
         // Controlador Consultar Roles
