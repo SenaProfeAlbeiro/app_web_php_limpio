@@ -14,11 +14,14 @@
                 <div class="mb-3">
                     <label for="user_pass">Contraseña</label>
                     <input type="password" class="form-control mt-1" id="user_pass" name="user_pass" placeholder="Entre 5 y 8 caracteres">
-                </div>
+                </div>                
                 <div class="row">
                     <div class="col text-center mt-2">
                         <button type="submit" class="btn btn-success btn-lg px-3">Enviar</button>
                     </div>
+                </div>
+                <div class="mb-3">
+                    <h3 class="h5"><?php echo $message ?></h3>
                 </div>
             </form>
         </div>

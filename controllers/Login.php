@@ -6,6 +6,7 @@ class Login
     public function main()
     {
         if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+            $message = "";
             require_once "views/company/login.view.php";
         }
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -18,7 +19,8 @@ class Login
                 $_SESSION['session'] = $user->getRolName();
                 header("Location:?c=Dashboard");
             } else {
-                echo "El Usuario No Existe";
+                $message = "El Usuario NO existe";
+                require_once "views/company/login.view.php";
             }
         }
     }
