@@ -53,6 +53,10 @@
 						<li>
 							<a href="?c=Dashboard"><i class="fab fa-dashcube fa-fw"></i> &nbsp; Dashboard</a>
 						</li>
+						
+						<li>
+							<a href="?c=Dashboard"><i class="fas fa-user fa-fw"></i> &nbsp; Editar Perfil</a>
+						</li>
 
 						<li>
 							<a href="?"><i class="fas fa-store-alt fa-fw"></i> &nbsp; Empresa</a>
