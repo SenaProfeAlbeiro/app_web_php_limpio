@@ -28,7 +28,7 @@ class Login
                     require_once "views/company/login.view.php";
                 }
             } else {
-                $message = "El Usuario NO existe";
+                $message = "Credenciales incorrectas ó el Usuario NO existe";
                 require_once "views/company/login.view.php";
             }
         }
