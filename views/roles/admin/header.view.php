@@ -45,7 +45,7 @@
 					<i class="far fa-times-circle show-nav-lateral"></i>
 					<img src="assets/dashboard/assets/avatar/Avatar.png" class="img-fluid" alt="Avatar">
 					<figcaption class="roboto-medium text-center">
-						Carlos Alfaro <br><small class="roboto-condensed-light"><?php echo $session ?></small>
+					<?php echo $profile->getUserName() . " " . $profile->getUserLastName() ?> <br><small class="roboto-condensed-light"><?php echo $session ?></small>
 					</figcaption>
 				</figure>
 				<div class="full-box nav-lateral-bar"></div>

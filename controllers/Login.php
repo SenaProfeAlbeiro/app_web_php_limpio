@@ -13,15 +13,16 @@ class Login
             }
         }
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-            $user = new User(
+            $profile = new User(
                 $_POST['user_email'],
                 $_POST['user_pass']
             );
-            $user = $user->login();            
-            if ($user) {
-                $active = $user->getUserState();
-                if ($active != 0) {
-                    $_SESSION['session'] = $user->getRolName();
+            $profile = $profile->login();            
+            if ($profile) {
+                $active = $profile->getUserState();
+                if ($active != 0) {                    
+                    $_SESSION['session'] = $profile->getRolName();                    
+                    $_SESSION['profile'] = serialize($profile);
                     header("Location:?c=Dashboard");
                 } else {
                     $message = "El Usuario NO está activo";
