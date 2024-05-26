@@ -8,10 +8,18 @@
 			<!-- Content -->
 			<div class="full-box tile-container">
 
+				<a href="#" class="tile">
+					<div class="tile-tittle">Perfil</div>
+					<div class="tile-icon">
+						<i class="fas fa-user fa-fw"></i>
+						<p>Editar Perfil</p>
+					</div>
+				</a>
+				
 				<a href="?c=Users&a=rolRead" class="tile">
 					<div class="tile-tittle">Roles</div>
 					<div class="tile-icon">
-						<i class="fas fa-user-secret fa-fw"></i>
+						<i class="fas fa-user-graduate fa-fw"></i>
 						<p>5 Registrados</p>
 					</div>
 				</a>
