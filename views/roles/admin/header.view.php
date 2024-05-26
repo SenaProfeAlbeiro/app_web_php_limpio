@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<title><?php echo strtoupper($session) ?></title>
+	<title><?php echo ucfirst($session) ?></title>
 	<link rel="shortcut icon" href="assets/dashboard/assets/img/logo-sena-verde-png-sin-fondo.png">
 
 	<!-- Normalize V8.0.1 -->
@@ -45,7 +45,7 @@
 					<i class="far fa-times-circle show-nav-lateral"></i>
 					<img src="assets/dashboard/assets/avatar/Avatar.png" class="img-fluid" alt="Avatar">
 					<figcaption class="roboto-medium text-center">
-						<?php echo $profile->getUserName() . " " . $profile->getUserLastName() ?> <br><small class="roboto-condensed-light"><?php echo $session ?></small>
+						<?php echo $profile->getUserName() . " " . $profile->getUserLastName() ?> <br><small class="roboto-condensed-light">Código Usuario: <?php echo $profile->getUserCode() ?></small>
 					</figcaption>
 				</figure>
 				<nav class="full-box nav-lateral-menu">
@@ -59,15 +59,14 @@
 				<nav class="full-box nav-lateral-menu">
 					<ul>
 						<li>
-							<a href="?c=Dashboard"><i class="fab fa-dashcube fa-fw"></i> &nbsp; Dashboard</a>
+							<a href="?c=Dashboard" class="<?php echo $action == 'main' ? 'background-btn-active' : '';  ?>"><i class="fab fa-dashcube fa-fw"></i> &nbsp; <?php echo ucfirst($session) ?></a>
 						</li>
 
 						<li>
-							<a href="#" class="nav-btn-submenu"><i class="fas fa-user-graduate fa-fw"></i> &nbsp; Roles <i class="fas fa-chevron-down"></i></a>
-							<ul>
-								<li>
-									<!-- Etiqueta a, propiedad href="Se llama Controlador y Método" -->
-									<a href="?c=Users&a=rolCreate"><i class="fas fa-plus fa-fw"></i> &nbsp; Registrar Rol</a>
+							<a href="#" class="nav-btn-submenu <?php echo ($action == 'rolCreate' || $action == 'rolRead') ? 'background-btn-active' : '';  ?>"><i class="fas fa-user-graduate fa-fw"></i> &nbsp; Roles <i class="fas fa-chevron-down"></i></a>
+							<ul class="">							
+								<li>									
+									<a href="?c=Users&a=rolCreate"><i class="fas fa-plus fa-fw"></i> &nbsp; Registrar Rol</a>									
 								</li>
 								<li>
 									<a href="?c=Users&a=rolRead"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; Consultar Roles</a>
@@ -79,8 +78,8 @@
 						</li>
 
 						<li>
-							<a href="#" class="nav-btn-submenu"><i class="fas fa-users fa-fw"></i> &nbsp; Usuarios <i class="fas fa-chevron-down"></i></a>
-							<ul>
+							<a href="#" class="nav-btn-submenu <?php echo ($action == 'userCreate' || $action == 'userRead') ? 'background-btn-active' : '';  ?>"><i class="fas fa-users fa-fw"></i> &nbsp; Usuarios <i class="fas fa-chevron-down"></i></a>
+							<ul class="">
 								<li>
 									<a href="?c=Users&a=userCreate"><i class="fas fa-plus fa-fw"></i> &nbsp; Registrar Usuario</a>
 								</li>

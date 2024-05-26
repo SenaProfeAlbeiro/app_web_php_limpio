@@ -1,14 +1,14 @@
 			<!-- Page header -->
 			<div class="full-box page-header">
 				<h3 class="text-left">
-					<i class="fas fa-clipboard-list fa-fw"></i> &nbsp; LISTA DE ROLES
+					<i class="fas fa-clipboard-list fa-fw"></i> &nbsp; CONSULTAR ROLES
 				</h3>
 			</div>
 
 			<div class="container-fluid">
 				<ul class="full-box list-unstyled page-nav-tabs">
 					<li>
-						<a href="?c=Users&a=rolCreate"><i class="fas fa-plus fa-fw"></i> &nbsp; AGREGAR ROL</a>
+						<a href="?c=Users&a=rolCreate"><i class="fas fa-plus fa-fw"></i> &nbsp; REGISTRAR ROL</a>
 					</li>
 					<li>
 						<a class="active" href="?c=Users&a=rolRead"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; CONSULTAR ROLES</a>

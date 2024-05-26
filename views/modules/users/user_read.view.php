@@ -1,14 +1,14 @@
 			<!-- Page header -->
 			<div class="full-box page-header">
 				<h3 class="text-left">
-					<i class="fas fa-clipboard-list fa-fw"></i> &nbsp; LISTA DE USUARIOS
+					<i class="fas fa-clipboard-list fa-fw"></i> &nbsp; CONSULTAR USUARIOS
 				</h3>
 			</div>
 			
 			<div class="container-fluid">
 				<ul class="full-box list-unstyled page-nav-tabs">
 					<li>
-						<a href="?c=Users&a=userCreate"><i class="fas fa-plus fa-fw"></i> &nbsp; NUEVO USUARIO</a>
+						<a href="?c=Users&a=userCreate"><i class="fas fa-plus fa-fw"></i> &nbsp; REGISTRAR USUARIO</a>
 					</li>
 					<li>
 						<a class="active" href="?c=Users&a=userRead"><i class="fas fa-clipboard-list fa-fw"></i> &nbsp; CONSULTAR USUARIOS</a>
