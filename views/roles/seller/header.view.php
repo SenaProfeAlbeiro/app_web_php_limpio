@@ -41,13 +41,20 @@
 		<section class="full-box nav-lateral">
 			<div class="full-box nav-lateral-bg show-nav-lateral"></div>
 			<div class="full-box nav-lateral-content">
-				<figure class="full-box nav-lateral-avatar">
+				<figure class="full-box nav-lateral-avatar pb-3">
 					<i class="far fa-times-circle show-nav-lateral"></i>
 					<img src="assets/dashboard/assets/avatar/Avatar.png" class="img-fluid" alt="Avatar">
 					<figcaption class="roboto-medium text-center">
-						Carlos Alfaro <br><small class="roboto-condensed-light"><?php echo $session ?></small>
+						<?php echo $profile->getUserName() . " " . $profile->getUserLastName() ?> <br><small class="roboto-condensed-light"><?php echo $session ?></small>
 					</figcaption>
 				</figure>
+				<nav class="full-box nav-lateral-menu">
+					<ul>
+						<li>
+							<a href="#"><i class="fas fa-user fa-fw"></i> &nbsp; Editar Perfil</a>
+						</li>
+					</ul>
+				</nav>
 				<div class="full-box nav-lateral-bar"></div>
 				<nav class="full-box nav-lateral-menu">
 					<ul>

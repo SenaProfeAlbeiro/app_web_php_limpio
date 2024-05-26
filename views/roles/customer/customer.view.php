@@ -14,5 +14,14 @@
 						<p>Datos Personales</p>
 					</div>
 				</a>
+
+				<a href="#" class="tile">
+					<div class="tile-tittle">Compras</div>
+					<div class="tile-icon">
+						<i class="fas fa-file-invoice-dollar fa-fw"></i>
+						<p>1 Registrada</p>
+					</div>
+				</a>
+
 			</div>
 		</section>
