@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<title><?php echo strtoupper($session) ?></title>
+	<title><?php echo ucfirst($session) ?></title>
 	<link rel="shortcut icon" href="assets/dashboard/assets/img/logo-sena-verde-png-sin-fondo.png">
 
 	<!-- Normalize V8.0.1 -->
@@ -45,7 +45,7 @@
 					<i class="far fa-times-circle show-nav-lateral"></i>
 					<img src="assets/dashboard/assets/avatar/Avatar.png" class="img-fluid" alt="Avatar">
 					<figcaption class="roboto-medium text-center">
-						<?php echo $profile->getUserName() . " " . $profile->getUserLastName() ?> <br><small class="roboto-condensed-light"><?php echo $session ?></small>
+						<?php echo $profile->getUserName() . " " . $profile->getUserLastName() ?> <br><small class="roboto-condensed-light">Código Usuario: <?php echo $profile->getUserCode() ?></small>
 					</figcaption>
 				</figure>
 				<nav class="full-box nav-lateral-menu">
@@ -59,7 +59,7 @@
 				<nav class="full-box nav-lateral-menu">
 					<ul>
 						<li>
-							<a href="?c=Dashboard"><i class="fab fa-dashcube fa-fw"></i> &nbsp; Dashboard</a>
+							<a href="?c=Dashboard" class="<?php echo $action == 'main' ? 'background-btn-active' : '';  ?>"><i class="fab fa-dashcube fa-fw"></i> &nbsp; <?php echo ucfirst($session) ?></a>
 						</li>
 
 						<li>							
