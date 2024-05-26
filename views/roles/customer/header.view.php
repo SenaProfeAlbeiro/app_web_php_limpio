@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<title><?php echo strtoupper($session) ?></title>
+	<link rel="shortcut icon" href="assets/dashboard/assets/img/logo-sena-verde-png-sin-fondo.png">
 
 	<!-- Normalize V8.0.1 -->
 	<link rel="stylesheet" href="assets/dashboard/css/normalize.css">
@@ -55,7 +56,7 @@
 						</li>
 						
 						<li>
-							<a href="?c=Dashboard"><i class="fas fa-user fa-fw"></i> &nbsp; Editar Perfil</a>
+							<a href="#"><i class="fas fa-user fa-fw"></i> &nbsp; Editar Perfil</a>
 						</li>
 
 						<li>
