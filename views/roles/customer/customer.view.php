@@ -8,7 +8,7 @@
 			<!-- Content -->
 			<div class="full-box tile-container">
 				<a href="#" class="tile">
-					<div class="tile-tittle">EditarPerfil</div>
+					<div class="tile-tittle">Editar Perfil</div>
 					<div class="tile-icon">
 						<i class="fas fa-user fa-fw"></i>
 						<p>Datos Personales</p>
