@@ -5,38 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Empresa</title>
     <!-- Estilos -->
-    <link rel="stylesheet" href="css/styles_boxmodel.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
-<!-- Contenedor -->
-    <div class="contenedor">
+<body>    
+    <!-- Contenedor -->
+    <div class="container">        
         <!-- Navegador -->
-        <nav>
-            <div class="borde logo"></div>
-            <div class="borde navega"></div>
-            <div class="borde ingreso"></div>
+        <nav class="row">
+            <div class="col-12 col-lg-2 border logo"></div>
+            <div class="col-12 col-md-10 col-lg-8 border navega"></div>
+            <div class="col-12 col-md-2 col-lg-2 border ingreso"></div>
         </nav>         
         <!-- Encabezado -->
-        <header class="borde"></header>
+        <header class="row border"></header>
         <!-- Portafolio -->
-        <div class="borde titulo"></div>
-        <section class="portafolio">
-            <div class="borde portafolio-column"></div>
-            <div class="borde portafolio-column"></div>
-            <div class="borde portafolio-column"></div>
+        <div class="row border titulo"></div>
+        <section class="row portafolio">
+            <div class="col-4 border portafolio-column"></div>
+            <div class="col-4 border portafolio-column"></div>
+            <div class="col-4 border portafolio-column"></div>
         </section>
         <!-- Nosotros -->
-        <div class="borde titulo"></div>
-        <section class="borde nosotros"></section>
+        <div class="row border titulo"></div>
+        <section class="row nosotros">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-5 border"></div>
+                    <div class="col-2 border"></div>
+                    <div class="col-5 border"></div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-5 border"></div>
+                    <div class="col-2 border"></div>
+                    <div class="col-5 border"></div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-5 border"></div>
+                    <div class="col-2 border"></div>
+                    <div class="col-5 border"></div>
+                </div>
+            </div>
+        </section>
         <!-- Contáctenos -->
-        <div class="borde titulo"></div>
-        <section class="borde contactenos"></section>
+        <div class="row border titulo"></div>
+        <section class="row border contactenos"></section>
         <!-- Pie de Página -->
-        <footer class="borde"></footer>
-        
-    </div>
-    
+        <footer class="row border"></footer>        
+    </div>    
     <!-- Scripts -->
+    <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/scripts.js"></script>
 </body>
 </html>
