@@ -9,6 +9,28 @@
     padding: 0;
     margin: 0;    
 }
+
+.editar{
+    padding: 5px;
+    border: 1px solid gray;
+    color: green;
+    border-radius: 3px;
+    margin-right: 5px;
+}
+.editar:hover{
+    background: black;
+    color: white;
+}
+.eliminar{    
+    padding: 5px 8px;
+    border: 1px solid gray;
+    color: red;
+    border-radius: 3px;
+}
+.eliminar:hover{    
+    background: black;
+    color: white;
+}
 /* ------------------------------------------------------------------------------------- */
 /* ---------------------------- II. LAYOUT: MAQUETACIÓN WEB ---------------------------- */
 /* ------------------------------- ESCRITORIO Y PORTATIL ------------------------------- */
